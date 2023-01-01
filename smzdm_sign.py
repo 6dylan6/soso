@@ -81,8 +81,8 @@ if __name__ == '__main__':
     ck = [
         #这里填入cookie，"XXXXX"
     ]
-    if os.environ["ZDMCK"]:
-        ck=os.environ["ZDMCK"].split("&")
+    if 'ZDMCK' in os.environ:
+        ck=os.environ["ZDMCK"]
 
     for i in ck:
         sign(i)
